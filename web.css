@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00eaff;
+    font-weight: bold;
+}
+
+.hero {
+   /* background: url('main-banner.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);*/
+    background: url('image2.jpg') center/cover no-repeat;
+    height: 100vh;  /*pour occuper toute la hauteur de l'écran.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*Centre le texte*/
+    align-items: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+
+
+
+
+    /*background: url('about-banner.jpg') center/cover no-repeat;
+    height: 300px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.intro {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/*.hero {
+    background: url('about-banner.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+*/
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-image {
+    width: 50%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
