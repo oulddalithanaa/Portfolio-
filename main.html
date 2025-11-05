@@ -1,0 +1,113 @@
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+        header {
+            background: #34495e;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .hero {
+            background: url('main-banner.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .content h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        .content p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #34495e;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!--li><a href="web.html">MAIN</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="tours.html">TOURS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                li><a href="main.html">MAIN</a></li-->
+                <li><a href="web.html">MAIN</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li> <!-- Page actuelle -->
+                <li><a href="tours.html">TOURS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        MAIN
+    </section>
+
+    <section class="content">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Nous sommes une agence de voyage passionnée par la découverte et l'exploration. Notre mission est d'offrir des expériences inoubliables en vous guidant vers les plus beaux endroits du monde.</p>
+        <p>Grâce à notre équipe expérimentée et nos services de qualité, nous vous assurons un voyage sécurisé et riche en aventures.</p>
+    </section>
+
+
+    
+
+    <footer>
+        <p>© 2025 Travel Website | Designed by You</p>
+    </footer>
+</body>
+</html>

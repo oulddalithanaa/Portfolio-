@@ -1,0 +1,130 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* En-tête */
+/*header {
+
+   
+
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+*/
+
+
+
+
+
+
+
+
+
+header {
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background-color:rgba(109, 76, 145, 0.8)
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00eaff;
+    font-weight: bold;
+}
+
+
+
+
+
+.hero {
+    background: url('ph.jpg') no-repeat center/cover;/*Applique une image de fond (background: url('background.jpg')).*/
+    height: 100vh;  /*pour occuper toute la hauteur de l'écran.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*Centre le texte*/
+    align-items: center;
+    text-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.8);
+    
+}
+.hero h1 {
+    font-size: 3em;
+    color: #b3dcd6;
+}
+/* Section des tours */
+.tours {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Grille des cartes */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Style des cartes */
+.tour-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tour-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Animation au survol */
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+/* Bouton de réservation */
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #d35400;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 30px;
+}

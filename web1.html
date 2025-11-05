@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- responsif sur le mobile -->
+    <title>Travel Website</title>           <!-- le titre de navigateur -->
+    <link rel="stylesheet" href="web1.css">    <!-- liaison avec le css -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!--ul>
+                <li><a href="#" class="nav-link">MAIN</a></li>
+                <li><a href="#" class="nav-link">ABOUT US</a></li>
+                <li><a href="#" class="nav-link">TOURS</a></li>
+                <li><a href="#" class="nav-link">GALLERY</a></li>
+                <li><a href="#" class="nav-link">REVIEWS</a></li>
+                <li><a href="#" class="nav-link">CONTACTS</a></li>
+            </ul!-->
+
+            <ul>       <!--C'est le menu de navigation avec une liste <ul>-->
+                <li><a href="web.html">MAIN</a></li>
+                <li><a href="about.html">ABOUT US</a></li>  <!-- Lien corrigé -->
+                <li><a href="tours.html">TOURS</a></li>      <!--Chaque élément <li> contient un lien <a> vers une page spécifique-->
+                <li><a href="gallery.html">GALLERY</a></li>
+                <!--<li><a href="pages/contact.html">CONTACTS</a></li>-->
+                <li><a href="contact.html">CONTACTS</a></li>
+                <!--li><a href="main.html">MAIN</a></li-->
+                
+            </ul>
+
+            
+
+        </nav>
+    </header>
+
+    <section class="hero">    <!--class="hero" sera utilisé dans le CSS pour styliser cette section (par exemple, ajouter une image de fond).-->
+        <h1>TIME TO TRAVEL</h1>   <!-- Cette section contient un titre principal (<h1>) et un sous-titre (<p>).-->
+        <p>The best time to visit Rocky Mountain National Park is from June to September...</p>
+    </section>
+
+
+
+    <section class="tours">   <!-- class="tours" : Contient la section des offres de voyages-->
+        <h2>POPULAR TOURS</h2>
+        <div class="tour-grid">     <!-- Une grille qui va organiser les tours sous forme de cartes (tour-card)-->
+            <div class="tour-card">TOUR 1</div>  <!--   Chaque div class="tour-card" représente une carte de voyage qui sera probablement stylisée en CSS.-->
+            <div class="tour-card">TOUR 2</div>
+            <div class="tour-card">TOUR 3</div>
+            <div class="tour-card">TOUR 4</div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>DISCOVER THE WORLD IN A NEW WAY</h2>
+        <button id="video-btn">WATCH THE VIDEO</button>   <!-- Un bouton pour afficher une vidéo.-->
+        <div id="video-popup" class="hidden">   <!-- Un conteneur caché qui s'affichera lorsque l'utilisateur clique sur le bouton.-->
+            <div class="video-container">
+                <span id="close-video">&times;</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AHEl22AxLZo" frameborder="0" allowfullscreen></iframe>     <!--Intègre une vidéo YouTube dans la page.-->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une agence de voyage passionnée par la découverte du monde...</p>
+    </section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contactez-nous</h2>
+            <p>Nous sommes à votre disposition pour toute question ou demande d'information.</p>
+    
+            <div class="contact-form">
+                <form id="contactForm">     <!--Un formulaire de contact avec des champs : nom, email, message.-->
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>   <!-- required empêche l’envoi du formulaire si les champs ne sont pas remplis.-->
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+    
+                    <button type="submit">Envoyer</button>
+                    <p id="formMessage" class="hidden">Merci ! Votre message a été envoyé.</p>     <!--Un message de confirmation (id="formMessage") est caché et s'affiche après l'envoi du formulaire.-->
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Nos coordonnées</h2>
+            <p>Vous pouvez nous contacter via les informations ci-dessous :</p>
+    
+            <div class="contact-info">
+                <p><strong>📍 Adresse :</strong> cité 190 AADL Ksar El Bourari</p>
+                <p><strong>📞 Téléphone :</strong> <a href="tel:+213 675603400">+213 675603400</a></p>
+                <p><strong>📧 Email :</strong> <a href="mailto:oulddali@gmail.com">oulddali@gmail.com</a></p>
+                <p><strong>🌍 Site web :</strong> <a href="https://votresite.com" target="_blank">www.votresite.com</a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <button id="back-to-top" class="hidden">↑</button>
+        
+    <footer>     <!--Pied de page simple avec un copyright et le nom du designer.-->
+        <p>© 2025 Travel Website | Designed by Thanaa</p>
+    </footer>
+
+    <script>
+        // Défilement fluide pour la navigation     Lorsque l'on clique sur un lien du menu, la page fait défiler en douceur jusqu'à la section correspondante.
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation des cartes de tours
+        document.querySelectorAll('.tour-card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'scale(1.05)';
+                card.style.transition = '0.3s';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Affichage de la vidéo au clic
+        document.getElementById('video-btn').addEventListener('click', () => {
+            document.getElementById('video-popup').classList.remove('hidden');
+        });
+        document.getElementById('close-video').addEventListener('click', () => {
+            document.getElementById('video-popup').classList.add('hidden');
+        });
+
+
+
+
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+
+        // Envoi du formulaire avec message de confirmation
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        // Afficher le message de confirmation
+        document.getElementById("formMessage").classList.remove("hidden");
+
+        // Réinitialiser le formulaire
+        document.getElementById("contactForm").reset();
+
+        // Cacher le message après 3 secondes
+        setTimeout(() => {
+            document.getElementById("formMessage").classList.add("hidden");
+        }, 3000);
+    }); 
+
+
+
+
+    document.getElementById("about-link").addEventListener("click", function() {
+        window.location.href = "web1.html";
+    });
+
+    </script>
+
+    <script>
+        document.getElementById("contacts-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("📍 Adresse : 123 Rue Exemple, Ville, Pays\n📞 Téléphone : +123 456 7890\n📧 Email : exemple@email.com\n🌍 Site : www.votresite.com");
+        });
+    </script>
+</body>
+</html>

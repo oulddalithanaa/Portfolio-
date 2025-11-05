@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Images</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <header>
+
+
+        <nav>
+            <ul>
+                <li><a href="web.html">MAIN</a></li>
+                <!--li><a href="about.html" class="active">ABOUT US</a></li>  Page actuelle -->
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="tours.html">TOURS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+            </ul>
+        </nav>
+
+
+        
+    
+    
+            
+    
+    
+        <!--section class="hero">
+            <h1>Nos Tours Populaires</h1>
+        </section>
+        <h1>Galerie de Voyage</h1-->
+    </header>
+
+
+
+
+    <section class="hero">
+        <h1>Nos Tours Populaires</h1>
+    </section>
+    <h1>Galerie de Voyage</h1>
+
+
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="images/tour1.jpg" alt="Tour 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tour2.jpg" alt="Tour 2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tour3.jpg" alt="Tour 3" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tour4.jpg" alt="Tour 4" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tour5.jpg" alt="Tour 5" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/tour6.jpg" alt="Tour 6" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
